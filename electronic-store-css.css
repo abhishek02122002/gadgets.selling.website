@@ -1,0 +1,795 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+:root {
+     --btn-color: #f64c72;
+     --text-color: white;
+     --hero-color: #2f2fa2;
+
+}
+
+#wrapper {
+     margin: 0;
+     background-color: #242582;
+     height: 100vh;
+     width: 100vw;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     overflow: hidden auto;
+}
+html,body{
+     scroll-behavior: smooth;
+     overflow: hidden auto;
+}
+
+.navbar {
+     z-index:5;
+     position: fixed;
+     top:0px;
+     display: flex;
+     background-color: #2f2fa2;
+     width: 100vw;
+     height: 45px;
+     justify-content: space-between;
+
+     .left-section-navbar {
+          display: flex;
+          color: white;
+          align-items: center;
+          gap: 2em;
+          justify-content: center;
+          width: 260px;
+          height: 45px;
+
+          & img {
+               /* padding-top:2px; */
+               margin: 0px;
+               height: 80%;
+               width: auto;
+          }
+
+          & p {
+               cursor: pointer;
+               transition: all 1s ease-in-out;
+
+               &:hover {
+                    color: transparent;
+                    background-image: url(https://media.giphy.com/media/9Gnbm29r7ftUA/giphy.gif);
+                    background-position: center;
+                    -webkit-background-clip: text;
+               }
+
+          }
+     }
+
+     .middle-section-navbar {
+          margin-top: 10px;
+
+          & ul {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               gap: 4rem;
+
+               & li {
+                    list-style-type: none;
+
+                    & a {
+                         color: azure;
+                         text-decoration: none;
+                    }
+               }
+          }
+     }
+
+}
+
+.navbar>.left-section-navbar>.first-btn {
+     padding-inline: 1.4em;
+     padding-block: 7px;
+     box-shadow: none;
+     background-color: #f64c72;
+     color: white;
+}
+.electronic-ghar{
+     position: absolute;
+     right:26px;
+     top:204px;
+     height:500px;
+     font-size: 40px;
+     writing-mode:vertical-rl;
+     font-weight: 800;
+     -webkit-text-stroke: 2px var(--btn-color);
+     color:transparent;
+     mix-blend-mode: difference;
+}
+
+.second-btn {
+     background-color: #2f2fa2;
+     border: 3px solid var(--btn-color);
+     color: var(--text-color);
+     padding-inline: 1.4em;
+     padding-block: 7px;
+}
+
+.first-hero-section {
+     display: flex;
+     width: 80%;
+     margin: 0 auto;
+     height: fit-content;
+     padding-top: 7em;
+     gap: 12%;
+     color: var(--text-color);
+
+     .first-hero-left-side-part {
+          display: flex;
+          flex-direction: column;
+
+          /* gap:2rem; */
+          & h1 {
+               color: var(--text-color);
+
+               .first-hero-h1 {
+                    font-size: 42px;
+                    color: var(--btn-color);
+                    transition:all 0.8s ease-in-out;
+                    cursor:progress;
+               &:hover{
+
+                    background-image: url("https://bestanimations.com/media/india/2117385360indian-flag-waving-gif-animation-10.gif");
+                    background-position: center;
+                    -webkit-background-clip: text;
+                    color:transparent;}
+               }
+          }
+
+          & p {
+               color: var(--text-color);
+               font-size: 15px;
+
+               .first-hero-p {
+                    color: var(--btn-color);
+               }
+          }
+
+          .first-hero-left-btn {
+               border: 1px solid var(--btn-color);
+               width: fit-content;
+               padding: 0.4rem;
+               margin-top: 1.8rem;
+               background-color: var(--btn-color);
+               cursor: pointer;
+               border-radius: 1.45px;
+
+               z-index: 1;
+               box-shadow: 2px 2px 5px black;
+               position: relative;
+
+          }
+     }
+}
+
+.first-hero-left-btn::before {
+     content: " ";
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: var(--hero-color);
+     transform-origin: left;
+     transform: scaleX(0);
+     transition: all 1s ease-in-out;
+     z-index: -1;
+}
+
+.first-hero-left-btn:hover::before {
+     transform: scaleX(1);
+
+}
+
+.first-hero-right-side-part {
+     /* border:1px solid white; */
+     width: fit-content;
+     display: flex;
+     gap: 3rem;
+
+     & div {
+          height: 320px;
+          width: 190px;
+          overflow: hidden;
+          /* border-radius:4px; */
+     }
+
+}
+
+.img1 {
+     background-image: url("iphone-6\(bg\).jpg");
+     background-size: cover;
+     background-position: center;
+     border-radius: 6px;
+     margin-top: 22px;
+     transition:all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.img2 {
+     background-image: url("tab-2\(bg\).jpg");
+     background-size: cover;
+     background-position: center;
+     border-radius: 6px;
+     margin-top: -9px;
+     transition:all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+
+}
+
+.img3 {
+     background-image: url("iphone-7\(bg2\).jpg");
+     background-size: cover;
+     background-position: center;
+     border-radius: 6px;
+     margin-top: 20px;
+     transition:all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.img1:hover,.img2:hover,.img3:hover{
+     transform:scale(1.1);
+}
+.second-hero-section{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap:3rem;
+}
+.logo-section{
+     display: grid;
+     grid-gap: 20px;
+     grid-template-rows: 1fr 1fr;
+     grid-template-columns: repeat(4,100px);
+     
+     margin-left:3rem;
+     /* margin-top:5rem; */
+     & div {
+          height:90px;
+          width:80px;
+          background-position:center;
+          background-size:cover;
+     }
+    
+     
+     .logo1{
+          
+          background-image:url("asus-logo-removebg-preview.png");
+     }
+     .logo2{
+          background-image:url("apple-logo-removebg-preview.png");
+     }
+     .logo3{
+          background-image:url("dell-logo-removebg-preview.png");
+     }
+     .logo4{
+          background-image:url("lenovo-logo-removebg-preview.png") ;
+     }
+     .logo5{
+          background-image:url("microsoft-logo-removebg-preview.png");
+     }
+     .logo6{
+          background-image:url("motorola-logo-removebg-preview.png");
+     }
+     .logo7{
+          background-image:url("samsung-logo-removebg-preview.png");
+     }
+     .logo8{
+          background-image:url("sony-logo-removebg-preview.png");
+     }
+}
+.hero-second-left-section{
+     color:var(--text-color);
+     display: flex;
+     flex-flow:wrap column;
+     width:40%;
+     gap:1rem;
+     & h2{
+          user-select: none;
+     }
+}
+.mobile-phones-section{
+     background-image:url("bg-phone.jpg");
+     height:400px;
+     width:100vw;
+     background-size:cover;
+     background-position:center;
+     background-attachment:fixed;
+     position:relative;
+     margin-top:7rem;
+     .mobile-section{
+          position: absolute;
+          color:var(--btn-color);
+          top:50%;
+          left:39%;
+          background-color: var(--hero-color);
+          font-weight:600;
+          padding:1em;
+          border-radius: 4px;
+     }
+}
+.third-hero-section{
+     margin:3rem 0px 0%  20px ;
+     & button {
+          background-color: var(--btn-color);
+          padding:0.7em;
+          color:var(--text-color);
+          font-weight:600;
+     }
+
+}
+.apple{
+     color:var(--btn-color);
+     margin-left:43%;
+     position: relative;
+}
+.apple::before{
+     content:" ";
+     position: absolute;
+     height:2px;
+     width:4rem;
+     top:14px;
+     right:100%;
+     background-color:var(--btn-color);
+}
+.apple::after{
+     content:" ";
+     position: absolute;
+     top:14px;
+     height:2px;
+     width:4rem;
+     top:14px;
+     background-color:var(--btn-color);
+}
+.apple-section-third-hero{
+     .scroll-bar-apple-section{
+          background-image: url("apple-logo-removebg-preview.png");
+          background-size: cover;
+          background-position: center;
+          margin: 16px auto 0px auto;
+          display: grid;
+          grid-template-columns: repeat(6,180px);
+          grid-template-rows: repeat(1,190px);
+          width:1000px;
+          overflow-x:auto;
+          grid-gap: 20px;
+          & div {
+               height:190px;
+               width:180px;
+               background-color: none;
+               background-size:cover;
+               background-position: center;
+               position:relative;
+          }
+          .iphone1{
+               background-image: url("iphone-1.jpg");
+          }
+          .iphone2{
+               background-image: url("iphone-2.jpg");
+          }
+          .iphone3{
+               background-image:url("iphone-3.jpg");
+          }
+          .iphone4{
+               background-image:url("iphone-4.jpg");
+          }
+          .iphone5{
+               background-image:url("iphone-5.jpg");
+          }
+          .iphone6{
+               background-image:url("iphone-6.jpg");
+          }
+     }
+}
+/* .iphone1::after{
+     content:"Iphone1:$-79";
+     position:absolute;
+     top:50%;
+     left:7%;
+     background-color:var(--hero-color);
+     transition:all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+     transform:scaleX(01);
+     opacity:3;
+     transform-origin:left;
+}
+.iphone1:hover ::after{
+          transform:scaleX(1);
+} */
+.samsung-section-third-hero{
+     margin-top:132px;
+     .scroll-bar-samsung-section{
+          background-image: url("samsung-logo-removebg-preview.png");
+          background-size: cover;
+          background-position: center;
+          margin: 16px auto 0px auto;
+          display: grid;
+          grid-template-columns: repeat(6,180px);
+          grid-template-rows: repeat(1,190px);
+          width:1000px;
+          overflow-x:auto;
+          grid-gap: 20px;
+          & div {
+               height:190px;
+               width:180px;
+               background-color: none;
+               background-size:cover;
+               background-position: center;
+               position:relative;
+          }
+          .samsung1{
+               background-image:url("s-4.jpg");
+          }
+          .samsung2{
+               background-image:url("samsung-phone.jpg");
+          }
+          .samsung3{
+               background-image:url("samsung-1.jpg");
+          }
+          .samsung4{
+               background-image:url("samsung-3.jpg");
+          }
+          .samsung5{
+               background-image:url("samsung-1.jpg");
+          }
+          .samsung6{
+               background-image:url("samsung-3.jpg");
+          }
+          .samsung7{
+               background-image: url("s-4.jpg");
+          }
+     }
+    
+}
+.laptop-section{
+     margin-top:2rem;
+     background-image:url("tab-2\(bg\).jpg");
+     height:19rem;
+     width:100vw;
+     background-position:center;
+     background-size:cover;
+     background-attachment:fixed;
+     object-fit:cover;
+     position:relative;
+}
+.laptop-banner-section{
+     position:absolute;
+     top:57%;
+     left:47%;
+     background-color: var(--hero-color);
+     color:var(--btn-color);
+     padding:15px;
+     font-weight:600;
+}
+.imac-laptop-section{
+     margin-top:3.6rem;
+     width:92%;
+     margin:20px auto 0 auto;
+     height:fit-content;
+     & button{
+          color:var(--text-color);
+          background-color:var(--btn-color);
+          padding:11px;
+          font-weight: 600;
+     }
+     .lallu-section{
+          display: grid;
+     }
+     
+}
+svg{
+     display:block;
+     background-image: url(" https://plus.unsplash.com/premium_photo-1680985551009-05107cd2752c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80");
+     background-position:center;
+     background-size:cover;
+     background-attachment: fixed;
+}
+.svg-box>h2{
+          color:var(--btn-color);
+          text-align: center;
+}
+.price-pool-and-offer{
+     width:60%;
+     height:95%;
+     margin:2em auto 0px auto;
+     background-position: center;
+     background-size:cover;
+     border-radius: 2%;
+     background-attachment: fixed;
+     /* background-blend-mode: darken; */
+     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5),#2f2fa2), url("price-pool-img.jpg");
+     position:relative;
+     & h2{
+          color:var(--btn-color);
+          position:absolute;
+          top:12%;
+          left:34%;
+          border-bottom:1px solid var(--text-color);
+          pointer-events: none;
+     }
+     .price-pool-other-div{
+          position: absolute;
+          top:20%;
+          left:6%;
+          width:90%;
+          height:70%;
+          .grid-div{
+               display: grid;
+               height:100%;
+               width:100%;
+               grid-template-columns: repeat(4,1fr);
+               grid-template-rows: repeat(2,1fr);
+               grid-gap:12px ;
+               overflow:hidden;
+               .grid-diva{
+                    background-color:transparent;
+                    border:0.2px solid var(--btn-color); 
+                    background-size:cover;
+                    background-position:center;
+                    position: relative;
+                    font-family: 'Kaushan Script', cursive;
+                    transition : all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                    &:hover{
+                         scale:1.09;
+                    }
+               }
+          }
+     }
+}
+ .images1{
+     background-image:url("svg-bg.jpg");
+}
+.images2{
+     background-image:url("laptop-for-grid.jpg");
+}
+.images3{
+     background-image: url("camera2.jpg");
+}
+.images4{
+     background-image:url("ear-buds.jpg");
+}
+.images5{
+     background-image:url("headset.jpg");
+}
+.images6{
+     background-image:url("keyboard.jpg");
+}
+.images7{
+     background-image:url("mouse.jpg");
+}
+.images8{
+     background-image:url("buffer.jpg");
+}
+h4{
+     position: absolute;
+     top:90%;
+     color:var(--hero-color);
+}
+.features-box{
+     height:12rem;
+     width:90%;
+     margin:7rem auto 0px auto;
+     & h3{
+          text-align: center;
+          color:var(--text-color);
+          font-size:40PX;
+     }
+
+}
+.msg-section-div{
+     height:100px;
+     width:200px;
+     
+     margin-top:12px;
+
+}
+.features-box > p{
+     margin-left:39rem;
+     text-align: center;
+     font-size:20px;
+     color:var(--btn-color);
+     font-weight:bold;
+     position:relative;
+     z-index:1;
+     display:inline-block;
+ }
+ .features-box > p::after{ /*LEAF STRUCTURE*/
+     content:" ";
+     width:50px;
+     height:35px;
+     background-image: linear-gradient(var(--btn-color),#fff);
+     position:absolute;
+     top:-20px;
+     left:0;
+     z-index:-1;
+     transform:rotate(10deg);
+     border-top-left-radius: 35px;
+     border-bottom-right-radius: 35px;
+ }
+ .container-features-box{
+     display: flex;
+     height:400px;
+     width:80%;
+     align-items: center;
+     justify-content: center;
+     gap:10rem;
+     .text-container-features-box{
+          border:0.1px solid var(--btn-color);
+          height:12rem;
+          width:40%;
+          padding:12px;
+     }
+     .grid-container-features-box{
+          height:300px;
+          width:300px;
+          /* border:1px solid red; */
+          .grid-areamessi{
+               display: grid;
+               grid-template-columns:180px 90px 90px 210px;
+               grid-template-rows:repeat(4,120px);
+               grid-gap: 0.51em;
+               .grid-area-grid{
+                    background-position: center;
+                    background-size:cover;
+                    border-radius:12px;
+                    /* border:0.3px solid red; */
+               }
+          }
+     }
+ }
+ .images1a{
+     grid-area:1/1/-1/2;
+     background-image: url("camera.jpg");
+ }
+ .images2a{
+     background-image: url("monitor.jpg");
+     grid-area:1/2/2/-1;
+ }
+ .images3a{
+     background-image: url("k2.jpg");
+     grid-area:2/-2/-1/-1;
+ }
+ .images4a{
+     background-image:url("television.jpg");
+     grid-area:3/2/4/3;
+ }
+ .images5a{
+     background-image:url("tv.jpg");
+     grid-area:4/2/-1/3;
+ }
+ .images6a{
+     background-image:url("smart-watch2.jpg");
+     grid-area:2/2/3/3;
+ }
+ .images7a{
+     background-image:url("mouse2.jpg");
+     grid-area:3/3/-1/4;
+}
+.images8a{
+     background-image:url("earphone2.jpg");
+}
+/* .cut-text-in-container-features-box{
+     margin: 3rem;
+     height:
+} */
+.footer,.footer-second{
+ width:100vw;
+ background-color: var(--btn-color);
+ height:300px;
+}
+.footer-second{
+     margin-bottom:0px;
+     margin-top:100%;
+}
+.footer-second{
+     background:#282a2e;
+     height:80%;
+     width:100%;
+     color:white;
+     margin-top:auto;
+ }
+ .box1{
+     display:flex;
+     justify-content: space-between;
+     margin-bottom:2rem;
+     border-bottom:0.8px solid #4b4c4e;
+     padding:1.2rem;
+ }
+ .left-part{
+     border:2px solid white;
+     padding:12px;
+     text-align: center;
+     font-weight:600;
+ }
+ .bold-section{
+     font-weight:900;
+     line-height:2.6em;
+ }
+ .box2{
+     display:flex;
+     justify-content: space-between;
+     border-bottom:0.8px solid #4b4c4e;
+     padding:1.2rem;
+     align-items: baseline;
+ }
+ .bold-text-bottom{
+     margin-bottom:2.8rem;
+     font-weight:700;
+     
+ }
+ span{
+     color:rgb(160, 79, 160);
+     font-weight:700;
+     text-transform: capitalize;
+     margin:auto;
+     /* font-size:63px; */
+ }
+ .icons{
+     
+     letter-spacing:26px;
+     margin-right:1.2rem;
+ 
+ }
+ .fa-brands:hover{
+     transform:scale(2.9);
+ }
+ .fa-brands{
+     transform:scale(2.5);
+     margin-right:1.2rem;
+     transition:all 1s;
+ }
+ .box3{
+     display:flex;
+     justify-content: space-between;
+     padding:1.2rem;
+     align-items: baseline;
+     gap:12px;
+ 
+ }
+ .left-box{
+     display:flex;
+     gap:6.5rem;
+ }
+ .left-box ul{
+     list-style-type: none;
+     color:white;
+     line-height:2rem;
+ }
+ a{
+     color:white;
+     text-decoration:none;
+ 
+ }
+ .left-box1{
+     display:flex;
+     flex-direction: column;
+     gap:12px;
+ }
+ .right-box{
+     border:2px solid white;
+     padding:12px;
+     text-align: center;
+     font-weight:600;
+ 
+ }
+ .last-section{
+     display:flex;
+     justify-content: space-between;
+     align-items: baseline;
+     
+ }
+ .udemy-section{
+     margin:2rem;
+     font-weight:700;
+     font-size:33px;
+ }
+ .inc-section{
+     font-size:10px;
+     margin:2rem;
+ }
+ 
